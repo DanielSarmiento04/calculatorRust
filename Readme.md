@@ -9,7 +9,7 @@ In rust is so common that function return a option or result type.
 
 - Option type:
     This is used to refer to result values, when function encapsulates a result in any type, include None type, vec <T>, Some etc
-```
+```rust
 pub enum Option<T> {
     None,
     Some(T),
@@ -19,7 +19,7 @@ pub enum Option<T> {
 - Result
     This is used to refer the error, when function returns a mistake, it can define with Generic values
 
-```
+```rust
 pub enum Result <T, E> {
     Ok(T),
     Err(E),
