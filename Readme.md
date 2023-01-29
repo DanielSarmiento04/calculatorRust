@@ -1,7 +1,10 @@
 # Calculator
 
-As you know rust have not a null datatype
+This a terminal calculator
 
+Example use
+
+![example1](./docs/Example1.png)
 
 ## Concept 
 
