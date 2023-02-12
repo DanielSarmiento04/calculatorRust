@@ -1,6 +1,20 @@
 # Calculator
 
-This a terminal calculator
+This a terminal calculator build with rust
+
+
+## Features
+
+1.  Support negative numbers in expressions
+
+> El resultado de 1 + 2 * 3 - 4 / 2 es:   5
+
+2. Modular function for any operation, in this case only I test with +,-,/ and *
+
+3. Use the mathematical logic
+
+> First resolve the division, then multiply then subtract and finally the addition
+
 
 Example use
 

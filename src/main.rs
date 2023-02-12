@@ -74,8 +74,7 @@ fn main() {
     stdin().read_line(&mut expression).expect("Failed to read line");
 
     expression = expression.trim().to_string();
-
-
+    
     expression  = ApplyOperationInStringExpression(expression, divide_regex_expression.to_string(), "/");
     expression  = ApplyOperationInStringExpression(expression, multiply_regex_expression.to_string(), "*");
     expression  = ApplyOperationInStringExpression(expression, subtract_regex_expression.to_string(), "-");
