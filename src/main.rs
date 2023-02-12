@@ -1,36 +1,9 @@
 use regex::Regex;
 // #[warn(unused_imports)]
-use std::{io::*, str::FromStr};
-
-fn main() {
-
-    // Declare all regex expression 
-
-    let add_regex_expression = r"(\-?\d+)\s?\+\s?(\d+)";
-    let subtract_regex_expression = r"(\-?\d+)\s?\-\s?(\d+)";
-    let multiply_regex_expression = r"(\-?\d+)\s?\*\s?(\-?\d+)";
-    let divide_regex_expression = r"(\-?\d+)\s?/\s?(\-?\d+)";
-
-    // Datos del usuario 
-    println!("Hello, welcome to the calculator");
-    println!("Please enter your expression");
-
-    // Take the expression from the user 
-    let mut expression = "-10/-2".to_string();
-
-
-    expression  = ApplyOperationInStringExpression(expression, divide_regex_expression.to_string(), "/");
-    expression  = ApplyOperationInStringExpression(expression, multiply_regex_expression.to_string(), "*");
-    expression  = ApplyOperationInStringExpression(expression, subtract_regex_expression.to_string(), "-");
-    expression  = ApplyOperationInStringExpression(expression, add_regex_expression.to_string(), "+");
-
-    println!("El resultado es: {:?}", expression);
-
-}
-
+// use std::{io::*, str::FromStr};
 
 /// This function is used to make the regex in the expression
-#[warn(unused_variables, dead_code,)]
+#[allow(non_snake_case)]
 fn ApplyOperationInStringExpression(mut expression: String, string_regex:String, operation:&str) -> String {
     
     let regex_expression = Regex::new(&string_regex).unwrap();
@@ -60,5 +33,32 @@ fn ApplyOperationInStringExpression(mut expression: String, string_regex:String,
     }
     return expression;
 }
+
+fn main() {
+
+    // Declare all regex expression 
+
+    let add_regex_expression = r"(\-?\d+)\s?\+\s?(\d+)";
+    let subtract_regex_expression = r"(\-?\d+)\s?\-\s?(\d+)";
+    let multiply_regex_expression = r"(\-?\d+)\s?\*\s?(\-?\d+)";
+    let divide_regex_expression = r"(\-?\d+)\s?/\s?(\-?\d+)";
+
+    // Datos del usuario 
+    println!("Hello, welcome to the calculator");
+    println!("Please enter your expression");
+
+    // Take the expression from the user 
+    let mut expression = "-10/-2".to_string();
+
+
+    expression  = ApplyOperationInStringExpression(expression, divide_regex_expression.to_string(), "/");
+    expression  = ApplyOperationInStringExpression(expression, multiply_regex_expression.to_string(), "*");
+    expression  = ApplyOperationInStringExpression(expression, subtract_regex_expression.to_string(), "-");
+    expression  = ApplyOperationInStringExpression(expression, add_regex_expression.to_string(), "+");
+
+    println!("El resultado es: {:?}", expression);
+
+}
+
 
 
